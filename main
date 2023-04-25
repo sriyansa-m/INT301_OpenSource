@@ -1,0 +1,70 @@
+#!/bin/bash
+
+function hardware_operating() {
+echo -e "-----------------------------------\n"
+echo -e "-----------------------------------\n"
+
+printf "Hardware & Operating info:\n";
+sudo lshw;
+
+echo -e "-----------------------------------\n"
+echo -e "-----------------------------------\n"
+
+}
+
+
+function operatingsystemInfo() {
+echo -e "------------------------------\n"
+echo -e "------------------------------\n"
+
+printf "Operating System Info in graphical way:\n";
+sudo neofetch
+echo -e "------------------------------\n"
+echo -e "------------------------------\n"
+
+}
+
+function sensorsInfo() {
+echo -e "------------------------------\n"
+echo -e "------------------------------\n"
+
+printf "Temperature and current usage of Hardware systems:\n";
+sudo sensors-detect;
+sudo sensors;
+
+echo -e "------------------------------\n"
+echo -e "------------------------------\n"
+
+}
+
+function cpuusageInfo() {
+echo -e "-----------------------------\n"
+echo -e "-----------------------------\n"
+
+printf "Monitoring of CPU Usage:\n"
+sudo htop
+
+echo -e "-----------------------------\n"
+echo -e "-----------------------------\n"
+
+}
+ 
+
+
+
+echo "Report of all Hardware & operating system details, sensors(temparature), cpu usage...!"
+{
+hardware_operating
+operatingsystemInfo
+sensorsInfo
+cpuusageInfo
+} 
+
+
+
+
+
+
+
+
+
